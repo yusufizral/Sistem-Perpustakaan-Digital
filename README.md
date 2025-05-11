@@ -1,13 +1,40 @@
-# Sistem-Perpustakaan-Digital
-📚 Sistem Perpustakaan Digital – Java OOP
-Proyek ini merupakan implementasi konsep Object Oriented Programming (OOP) dalam bahasa pemrograman Java menggunakan studi kasus sistem perpustakaan digital. Aplikasi ini mendukung input buku secara interaktif dari pengguna dan mendemonstrasikan konsep:
+# Sistem Perpustakaan Digital 📚
 
-Class & Object
+Proyek ini adalah implementasi dasar dari sistem perpustakaan berbasis Java dengan pendekatan **Object-Oriented Programming (OOP)**. Program ini memungkinkan pengguna untuk memasukkan data buku dari berbagai jenis (buku umum, fiksi, fantasi) dan menampilkannya kembali.
 
-Enkapsulasi (Encapsulation)
+## 🔧 Fitur Utama
+- Input buku berdasarkan jenis (Umum, Fiksi, Fantasi)
+- Penyimpanan data buku dalam array
+- Penampilan informasi lengkap buku sesuai jenisnya
+- Demonstrasi konsep OOP: Class, Object, Encapsulation, Inheritance, dan Array
 
-Pewarisan (Inheritance) hingga 2 tingkat
+## 🧠 Konsep OOP yang Digunakan
 
-Array
+### 1. Class & Object
+Setiap jenis buku direpresentasikan dengan class `Buku`, `BukuFiksi`, dan `BukuFiksiFantasi`. Objek dibuat berdasarkan input pengguna.
 
-Polimorfisme (melalui metode tampilkanInfo())
+### 2. Encapsulation
+Atribut pada masing-masing class disembunyikan dengan `private`, dan diakses melalui getter.
+
+### 3. Inheritance
+- `BukuFiksi` mewarisi `Buku`
+- `BukuFiksiFantasi` mewarisi `BukuFiksi`  
+Menunjukkan dua tingkat pewarisan (sub-child class).
+
+### 4. Array
+Semua objek buku disimpan dalam array `Buku[] koleksi`, yang kemudian ditampilkan satu per satu.
+
+## 📁 Struktur File
+
+├── Buku.java // Class dasar buku
+├── BukuFiksi.java // Turunan dari Buku (dengan genre)
+├── BukuFiksiFantasi.java // Turunan dari BukuFiksi (dengan dunia fiksi)
+├── Perpustakaan.java // Class utama (main) untuk menjalankan program
+
+## ▶️ Cara Menjalankan
+1. Pastikan Anda memiliki Java terinstal.
+2. Compile seluruh file:
+   ```bash
+   javac *.java
+   java Perpustakaan
+
